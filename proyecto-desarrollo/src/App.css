@@ -1,5 +1,15 @@
+::-webkit-scrollbar{
+  width: 0;
+}
+
+body{
+  /*proporciona un margen derecho para que el contenido no se superponga a la barra de desplazamiento*/
+  margin-right: 0.5px; 
+}
+
 .App {
   text-align: center;
+  overflow: hidden;
 }
 
 .App-logo {
