@@ -1,23 +1,12 @@
 import React from 'react';
 import './App.css';
+import { Buscador } from './Buscador';
 
 function App() {
   return (
     <>
       <Prueba/>
-      <Prueba/>
-      <Prueba/>
-      <Prueba/>
-      <Prueba/>
-      <Prueba/>
-      <Prueba/>
-      <Prueba/>
-      <Prueba/>
-      <Prueba/>
-      <Prueba/>
-      <Prueba/>
-      <Prueba/>
-      <Prueba/>
+      <Buscador/>
     </>
   );
 }

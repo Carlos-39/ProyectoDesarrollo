@@ -1,0 +1,10 @@
+.Buscador{
+	background: url(https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-19-32.png) no-repeat 0px 5px;
+	background-size: 24px;
+  	width: 200px;
+  	border: transparent;
+  	border-bottom: solid 1px #ccc;
+  	padding: 10px 10px 10px 30px;
+  	outline: none;
+	justify-content: right;
+}
