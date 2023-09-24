@@ -1,9 +1,10 @@
 .slogan{
 	background-color: #f2f4f5;
 	text-align: center;
-	padding: 10px 0;
+	padding: 5px 0;
 	font-family: 'Montserrat', sans-serif;
-	font-size: 25px;
+	font-size: 17px;
+	margin: 0;
 }
 
 .slogan::before, .slogan::after {

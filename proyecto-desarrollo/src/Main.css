@@ -1,0 +1,24 @@
+.image-grid{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
+.image-container{
+	/* text-align: center;
+	margin-right: 20px; */
+	position: relative;
+}
+
+/* .image-overlay{
+	backdrop-filter: blur(100px);
+} */
+
+.image-container img{
+	height: 460px;
+	width: auto;
+	max-height: 460px;
+}

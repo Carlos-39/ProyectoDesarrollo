@@ -3,6 +3,7 @@ import './App.css';
 import { Buscador } from './Buscador';
 import { Header } from './Header';
 import { Slogan } from './Slogan';
+import { Main } from './Main';
 import { Footer } from './Footer';
 
 function App() {
@@ -11,17 +12,7 @@ function App() {
       <Buscador/>
       <Header/>
       <Slogan/>
-      <Prueba/>
-      <Prueba/>
-      <Prueba/>
-      <Prueba/>
-      <Prueba/>
-      <Prueba/>
-      <Prueba/>
-      <Prueba/>
-      <Prueba/>
-      <Prueba/>
-      <Prueba/>
+      <Main/>
       <Footer/>
     </>
   );
