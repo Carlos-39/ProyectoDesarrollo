@@ -5,7 +5,6 @@ import { Buscador } from './Buscador';
 function App() {
   return (
     <>
-      <Prueba/>
       <Buscador/>
     </>
   );
