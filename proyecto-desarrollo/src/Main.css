@@ -8,17 +8,44 @@
 }
 
 .image-container{
-	/* text-align: center;
-	margin-right: 20px; */
 	position: relative;
+	overflow: hidden;
 }
-
-/* .image-overlay{
-	backdrop-filter: blur(100px);
-} */
 
 .image-container img{
 	height: 460px;
 	width: auto;
 	max-height: 460px;
+}
+
+.image-opacity{
+	width: 100%;
+	height: auto;
+	opacity: 0.4;
+	transition: transform 0.3s ease;
+}
+
+.image-text{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 20px;
+	border: 2px solid #1E1E1F;
+  	border-radius: 10px;
+  	color: #1E1E1F;
+  	text-align: center;
+	font-weight: bold;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.image-text p{
+	margin: 0;
+}
+
+.image-container:hover .image-opacity{
+	transform: scale(1.4);
 }

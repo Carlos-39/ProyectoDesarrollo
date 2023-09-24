@@ -8,29 +8,29 @@ function Main(){
 	return(
 		<main className="image-grid">
 			<div className="image-container">
-				<div className="image-overlay">
-					<img src={imagen1} alt='imagen 1'/>
-					<p>DCR2000</p>
-				</div>
-			</div>
+        		<img src={imagen1} alt="imagen 1" className="image-opacity" />
+        		<div className="image-text">
+          			<p>DCR2000</p>
+        		</div>
+      		</div>
 			<div className="image-container">
-				<div className="image-overlay">
-					<img src={imagen2} alt='imagen 2'/>
-					<p>WH15000</p>
-				</div>
-			</div>
+        		<img src={imagen2} alt="imagen 2" className="image-opacity" />
+        		<div className="image-text">
+          			<p>WH15000</p>
+        		</div>
+      		</div>
 			<div className="image-container">
-				<div className="image-overlay">
-					<img src={imagen3} alt='imagen 3'/>
-					<p>FC50</p>
-				</div>
-			</div>
+        		<img src={imagen3} alt="imagen 3" className="image-opacity" />
+        		<div className="image-text">
+          			<p>FC50</p>
+        		</div>
+      		</div>
 			<div className="image-container">
-				<div className="image-overlay">
-					<img src={imagen4} alt='imagen 4'/>
-					<p>CRA-30</p>
-				</div>
-			</div>
+        		<img src={imagen4} alt="imagen 4" className="image-opacity" />
+        		<div className="image-text">
+          			<p>CRA-30</p>
+        		</div>
+      		</div>
 		</main>
 	);
 }
