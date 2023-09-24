@@ -6,5 +6,5 @@ Hecho por:
   - Carlos Daniel Corrales Arango (2122878)
   - Juleipssy Daianne Cely Archila ()
   - Javier Humberto Grijalba Camayo ()
-  - Jose Manuel Palma Oquendo ()
+  - Jose Manuel Palma Oquendo (2125182)
   - Hernan David Cisneros Vargas ()
