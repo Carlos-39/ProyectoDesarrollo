@@ -12,7 +12,6 @@
 	margin-right: 10px;
 }
 
-
 .Buscador{
 	border: none;
 	outline: none;
@@ -31,4 +30,15 @@
 	width: 24px;
 	height: 24px;
 	margin-left: 5px;
+}
+
+@media (max-width: 767px){
+	.buscador-container{
+		width: 100%;
+	}
+
+	.lupa-icono{
+		width: 20px;
+		height: 20px;
+	}
 }

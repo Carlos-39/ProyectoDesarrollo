@@ -1,0 +1,14 @@
+.slogan{
+	background-color: #f2f4f5;
+	text-align: center;
+	padding: 10px 0;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 25px;
+}
+
+.slogan::before, .slogan::after {
+	content: "\2022";
+	margin-right: 10px;
+	margin-left: 10px;
+	font-size: 24px;
+}
