@@ -1,20 +1,28 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import { Buscador } from './Buscador';
 import { Header } from './Header';
 import { Slogan } from './Slogan';
 import { Main } from './Main';
+import { BotonConoceMas } from './BotonConoceMas';
 import { Footer } from './Footer';
 
 function App() {
   return (
-    <>
+    <Router>
+      {/* <Routes>
+        <Route path='/carros'>
+        </Route>
+      </Routes> */}
+
       <Buscador/>
       <Header/>
       <Slogan/>
       <Main/>
+      <BotonConoceMas/>
       <Footer/>
-    </>
+    </Router>
   );
 }
 
