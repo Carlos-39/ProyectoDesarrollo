@@ -4,6 +4,7 @@ import './App.css';
 import { Buscador } from './Buscador';
 import { Header } from './Header';
 import { Slogan } from './Slogan';
+import { TitleMainView } from './TitleMainView';
 import { Main } from './Main';
 import { BotonConoceMas } from './BotonConoceMas';
 import { Footer } from './Footer';
@@ -19,6 +20,7 @@ function App() {
       <Buscador/>
       <Header/>
       <Slogan/>
+      <TitleMainView/>
       <Main/>
       <BotonConoceMas/>
       <Footer/>
