@@ -3,11 +3,10 @@
 	color: #1E1E1F;
   	padding: 10px;
   	text-align: center;
-	margin-top: 10px;
 }
 
 .titulo{
-	font-size: 50px;
+	font-size: 55px;
 	text-align: center;
 	margin: 0;
 	padding: 15px;
@@ -17,7 +16,7 @@
 	letter-spacing: 2px;
 	font-weight: bold;
 	position: relative;
-	text-shadow: 0px 0px 9px #0a0a0a;
+	text-shadow: 0px 0px 6px #0a0a0a;
 }
 
 nav{
