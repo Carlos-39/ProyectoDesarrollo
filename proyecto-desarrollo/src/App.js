@@ -4,7 +4,7 @@ import './App.css';
 import { Buscador } from './Buscador';
 import { Header } from './Header';
 import { Slogan } from './Slogan';
-import { TitleMainView } from './TitleMainView';
+import { Title } from './Title';
 import { Main } from './Main';
 import { BotonConoceMas } from './BotonConoceMas';
 import { Footer } from './Footer';
@@ -37,7 +37,7 @@ function Home(){
   return (
     <div>
       <Slogan/>
-      <TitleMainView/>
+      <Title title={'Ultimos Lanzamientos'}/>
       <Main/>
       <BotonConoceMas/>
     </div>
@@ -48,6 +48,7 @@ function Home(){
 function VistaCarros(){
   return (
     <div>
+      <Title title={'Todos Nuestros Vehiculos'}/>
     </div>
   );
 }
@@ -55,6 +56,7 @@ function VistaCarros(){
 function VistaSucursales(){
   return (
     <div>
+      <Title title={'Sucursales'}/>
     </div>
   );
 }
@@ -62,6 +64,7 @@ function VistaSucursales(){
 function VistaTaller(){
   return (
     <div>
+      <Title title={'Taller'}/>
     </div>
   );
 }
@@ -69,6 +72,7 @@ function VistaTaller(){
 function VistaAboutUs(){
   return (
     <div>
+      <Title title={'Sobre Nosotros'}/>
     </div>
   );
 }
