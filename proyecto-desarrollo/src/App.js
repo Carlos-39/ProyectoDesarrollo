@@ -8,6 +8,7 @@ import { Title } from './Title';
 import { Main } from './Main';
 import { BotonConoceMas } from './BotonConoceMas';
 import { Footer } from './Footer';
+import { AboutUs } from './AboutUs';
 
 function App() {
   return (
@@ -73,6 +74,8 @@ function VistaAboutUs(){
   return (
     <div>
       <Title title={'Sobre Nosotros'}/>
+      <Slogan/>
+      <AboutUs/>
     </div>
   );
 }
