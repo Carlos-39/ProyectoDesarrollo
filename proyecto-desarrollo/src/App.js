@@ -13,6 +13,7 @@ import { Sucursal } from './Sucursal';
 import sucursal1 from './sucursal1.jpg';
 import sucursal2 from './sucursal2.jpg';
 import sucursal3 from './sucursal3.jpg';
+import { BackButton } from './BackButton';
 
 function App() {
   return (
@@ -104,6 +105,7 @@ function VistaLogin(){
   return (
     <div>
       <h1>¡Bienvenido! Por favor, inicia sesión.</h1>
+      <BackButton/>
     </div>
   );
 }
