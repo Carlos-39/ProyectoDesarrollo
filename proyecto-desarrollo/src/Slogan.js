@@ -2,7 +2,7 @@ import './Slogan.css'
 
 function Slogan(){
 	return(
-		<p className='slogan' >Bienvenido a la revolucion automotriz</p>
+		<p className='slogan' >Bienvenido a la revolución automotriz</p>
 	);
 }
 

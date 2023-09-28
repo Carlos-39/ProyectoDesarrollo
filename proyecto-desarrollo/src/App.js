@@ -18,10 +18,6 @@ function App() {
   return (
     <Router>
       {/* organizacion de toda la pagina web */}
-      {/* Buscador, Header, Footer son componentes que estaran en todas las vistas */}
-      <Buscador/>
-      <Header/>
-
       {/* rutas para poder cambiar de vistas con sus respectivos renders */}
       <Routes>
         <Route path="/" element={<Home/>}/>
@@ -31,8 +27,6 @@ function App() {
         <Route path="/about-us" element={<VistaAboutUs/>} />
         <Route path="/login" element={<VistaLogin/>} />
       </Routes>
-
-      <Footer/>
     </Router>
   );
 }
@@ -41,10 +35,13 @@ function App() {
 function Home(){
   return (
     <div>
+      <Buscador/>
+      <Header/>
       <Slogan/>
       <Title title={'Ultimos Lanzamientos'}/>
       <Main/>
       <BotonConoceMas/>
+      <Footer/>
     </div>
   );
 }
@@ -53,7 +50,10 @@ function Home(){
 function VistaCarros(){
   return (
     <div>
+      <Buscador/>
+      <Header/>
       <Title title={'Todos Nuestros Vehiculos'}/>
+      <Footer/>
     </div>
   );
 }
@@ -65,10 +65,13 @@ function VistaSucursales(){
 
   return (
     <div>
+      <Buscador/>
+      <Header/>
       <Title title={'Sucursales'}/>
       <Sucursal ciudad={'Cali'} direction={'Direccion: calle 8a #34-67'} numero={'Contacto: 3158746695'} jefeTaller={'Jefe de Taller: Isabella Corrales'} imagen={imagenCali} />
       <Sucursal ciudad={'Medellin'} direction={'Direccion: carrera 78b #49-55'} numero={'Contacto: 3218754620'} jefeTaller={'Jefe de Taller: Catalina Arango'} imagen={imagenMedellin} />
       <Sucursal ciudad={'Bogota'} direction={'Direccion: calle 56 #11-20a'} numero={'Contacto: 3121475628'} jefeTaller={'Jefe de Taller: Diego Camacho'} imagen={imagenBogota} />
+      <Footer/>
     </div>
   );
 }
@@ -76,7 +79,10 @@ function VistaSucursales(){
 function VistaTaller(){
   return (
     <div>
+      <Buscador/>
+      <Header/>
       <Title title={'Taller'}/>
+      <Footer/>
     </div>
   );
 }
@@ -84,9 +90,12 @@ function VistaTaller(){
 function VistaAboutUs(){
   return (
     <div>
+      <Buscador/>
+      <Header/>
       <Title title={'Sobre Nosotros'}/>
       <Slogan/>
       <AboutUs/>
+      <Footer/>
     </div>
   );
 }
@@ -94,6 +103,7 @@ function VistaAboutUs(){
 function VistaLogin(){
   return (
     <div>
+      <h1>¡Bienvenido! Por favor, inicia sesión.</h1>
     </div>
   );
 }
