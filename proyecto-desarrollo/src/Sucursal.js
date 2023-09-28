@@ -10,7 +10,7 @@ function Sucursal({ciudad, direction, numero, jefeTaller, imagen}){
 				<p className='p-sucursal'>{jefeTaller}</p>
 			</div>
 			<div className="image-sucursal">
-				<img src={imagen} alt='imagen de ${ciudad}' />
+				<img src={imagen} alt='imagen de ciudad' />
 			</div>
         </div>
     )
