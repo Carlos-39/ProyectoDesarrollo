@@ -9,6 +9,10 @@ import { Main } from './Main';
 import { BotonConoceMas } from './BotonConoceMas';
 import { Footer } from './Footer';
 import { AboutUs } from './AboutUs';
+import { Sucursal } from './Sucursal';
+import sucursal1 from './sucursal1.jpg';
+import sucursal2 from './sucursal2.jpg';
+import sucursal3 from './sucursal3.jpg';
 
 function App() {
   return (
@@ -55,9 +59,16 @@ function VistaCarros(){
 }
 
 function VistaSucursales(){
+  const imagenCali = sucursal1;
+  const imagenMedellin = sucursal2;
+  const imagenBogota = sucursal3;
+
   return (
     <div>
       <Title title={'Sucursales'}/>
+      <Sucursal ciudad={'Cali'} direction={'Direccion: calle 8a #34-67'} numero={'Contacto: 3158746695'} jefeTaller={'Jefe de Taller: Isabella Corrales'} imagen={imagenCali} />
+      <Sucursal ciudad={'Medellin'} direction={'Direccion: carrera 78b #49-55'} numero={'Contacto: 3218754620'} jefeTaller={'Jefe de Taller: Catalina Arango'} imagen={imagenMedellin} />
+      <Sucursal ciudad={'Bogota'} direction={'Direccion: calle 56 #11-20a'} numero={'Contacto: 3121475628'} jefeTaller={'Jefe de Taller: Diego Camacho'} imagen={imagenBogota} />
     </div>
   );
 }
