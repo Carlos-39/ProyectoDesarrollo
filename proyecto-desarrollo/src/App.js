@@ -1,19 +1,20 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import { Buscador } from './Buscador';
-import { Header } from './Header';
-import { Slogan } from './Slogan';
-import { Title } from './Title';
-import { Main } from './Main';
-import { BotonConoceMas } from './BotonConoceMas';
-import { Footer } from './Footer';
-import { AboutUs } from './AboutUs';
-import { Sucursal } from './Sucursal';
-import sucursal1 from './sucursal1.jpg';
-import sucursal2 from './sucursal2.jpg';
-import sucursal3 from './sucursal3.jpg';
-import { BackButton } from './BackButton';
+import { Buscador } from './Components/Buscador/Buscador';
+import { Header } from './Components/Header/Header';
+import { Slogan } from './Components/Slogan/Slogan';
+import { Title } from './Components/Title/Title';
+import { Main } from './Components/Main/Main';
+import { BotonConoceMas } from './Components/BotonConoceMas/BotonConoceMas';
+import { Footer } from './Components/Footer/Footer';
+import { AboutUs } from './Components/AboutUs/AboutUs';
+import { Sucursal } from './Components/Sucursal/Sucursal';
+import sucursal1 from './images/sucursal1.jpg';
+import sucursal2 from './images/sucursal2.jpg';
+import sucursal3 from './images/sucursal3.jpg';
+import { BackButton } from './Components/BackButton/BackButton';
+import { CarroContainer } from './CarroContainer';
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function VistaCarros(){
       <Buscador/>
       <Header/>
       <Title title={'Todos Nuestros Vehiculos'}/>
+      {/* <CarroContainer/> */}
       <Footer/>
     </div>
   );

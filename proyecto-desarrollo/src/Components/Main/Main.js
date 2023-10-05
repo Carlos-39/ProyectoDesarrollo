@@ -1,8 +1,8 @@
 import './Main.css'
-import imagen1 from './DCR2000.png'
-import imagen2 from './WH15000.png'
-import imagen3 from './FC50.png'
-import imagen4 from './cra30.png'
+import imagen1 from '../../images/DCR2000.png'
+import imagen2 from '../../images/WH15000.png'
+import imagen3 from '../../images/FC50.png'
+import imagen4 from '../../images/cra30.png'
 
 function Main(){
 	return(

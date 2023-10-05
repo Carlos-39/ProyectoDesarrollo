@@ -1,5 +1,5 @@
 import './AboutUs.css'
-import imagen5 from './carro1.jpg'
+import imagen5 from '../../images/carro1.jpg';
 
 function AboutUs(){
 	return(

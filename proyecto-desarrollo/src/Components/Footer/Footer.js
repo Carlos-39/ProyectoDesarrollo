@@ -7,7 +7,7 @@ function Footer() {
 			<div className="footer-section">
         		<h3>Información de Contacto</h3>
         		<p>Teléfono: (+57 3215279458)</p>
-        		<p>Email: ejemplo@email.com</p>
+        		<p>Email: electrox@electro.com</p>
       		</div>
 
 			<hr className="divisoria"/>

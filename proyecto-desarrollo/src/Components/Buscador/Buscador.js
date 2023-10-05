@@ -1,6 +1,6 @@
 import './Buscador.css'
 import { Link } from 'react-router-dom'
-import LupaIcon from './lupa.png'
+import LupaIcon from '../../images/lupa.png'
 
 function Buscador(){
 	return(
