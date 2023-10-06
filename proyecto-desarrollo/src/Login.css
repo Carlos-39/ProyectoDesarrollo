@@ -75,7 +75,23 @@ input[type="password"] {
 }
 
 .required {
-	color: red;
+	color: #ad0c0c;
 	margin-left: 5px;
 	font-weight: bold;
+}
+
+.show-password-button{
+	background-color: #1E1E1F;
+  	color: #f2f3f4;
+  	border: none;
+  	padding: 5px 10px;
+	margin-left: 5px;
+  	cursor: pointer;
+  	border-radius: 5px;
+  	outline: none;
+  	transition: background-color 0.3s ease;
+}
+
+.show-password-button:hover {
+	background-color: #ad0c0c; /* Color de fondo del botón al pasar el cursor sobre él */
 }

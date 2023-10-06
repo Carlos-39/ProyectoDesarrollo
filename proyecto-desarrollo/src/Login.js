@@ -7,7 +7,7 @@ function Login({ onLoginSuccess }) {
 	const [email, setEmail] = useState('');
   	const [password, setPassword] = useState('');
   	const [errorMsg, setErrorMsg] = useState('');
-  	// const [redirectToHome, setRedirectToHome] = useState(false);
+	const [showPassword, setShowPassword] = useState(false);
 
 	const handleLogin = async (e) => {
 		e.preventDefault();
@@ -20,7 +20,7 @@ function Login({ onLoginSuccess }) {
 		if (isAuthenticated) {
 			onLoginSuccess();
 		}else{
-			setErrorMsg('Datos Incorrectos');
+			setErrorMsg('Datos Incorrectos, intenta de nuevo');
 		}
 	};
 
@@ -35,7 +35,17 @@ function Login({ onLoginSuccess }) {
         		</div>
         		<div className="form-group">
           			<label htmlFor="password">Contraseña<span className="required">*</span> </label>
-          			<input type="password" id="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+          			<input
+              			type={showPassword ? 'text' : 'password'}
+              			id="password"
+              			name="password"
+              			value={password}
+              			onChange={(e) => setPassword(e.target.value)}
+              			required
+            		/>
+					<button type="button" onClick={() => setShowPassword(!showPassword)} className="show-password-button">
+						{showPassword ? "Ocultar" : "Mostrar"}
+            		</button>
         		</div>
         		<div className="button-contenedor">
           			<button type="submit" className="login-boton">Iniciar Sesión</button>
