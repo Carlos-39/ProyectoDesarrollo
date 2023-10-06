@@ -5,7 +5,7 @@ const vehiculos = [
     estado: 'En el taller',
     tiempoEstimado: '2 días',
     ubicacion: 'Sucursal Cali',
-	clienteId: 1,
+	  clienteId: 1,
   },
   {
     id: 2,

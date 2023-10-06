@@ -44,7 +44,7 @@ function Home(){
       <Buscador/>
       <Header/>
       <Slogan/>
-      <Title title={'Ultimos Lanzamientos'}/>
+      <Title title={'Últimos Lanzamientos'}/>
       <Main/>
       <BotonConoceMas/>
       <Footer/>
@@ -58,7 +58,7 @@ function VistaCarros(){
     <div>
       <Buscador/>
       <Header/>
-      <Title title={'Todos Nuestros Vehiculos'}/>
+      <Title title={'Todos Nuestros Vehículos'}/>
       {/* <CarroContainer/> */}
       <SoonTitle title={'Coming Soon'}/>
       <Footer/>
@@ -76,9 +76,9 @@ function VistaSucursales(){
       <Buscador/>
       <Header/>
       <Title title={'Sucursales'}/>
-      <Sucursal ciudad={'Cali'} direction={'Direccion: calle 8a #34-67'} numero={'Contacto: 3158746695'} jefeTaller={'Jefe de Taller: Isabella Corrales'} imagen={imagenCali} />
-      <Sucursal ciudad={'Medellin'} direction={'Direccion: carrera 78b #49-55'} numero={'Contacto: 3218754620'} jefeTaller={'Jefe de Taller: Catalina Arango'} imagen={imagenMedellin} />
-      <Sucursal ciudad={'Bogota'} direction={'Direccion: calle 56 #11-20a'} numero={'Contacto: 3121475628'} jefeTaller={'Jefe de Taller: Diego Camacho'} imagen={imagenBogota} />
+      <Sucursal ciudad={'Cali'} direction={'Dirección: calle 8a #34-67'} numero={'Contacto: 3158746695'} jefeTaller={'Jefe de Taller: Isabella Corrales'} imagen={imagenCali} />
+      <Sucursal ciudad={'Medellin'} direction={'Dirección: carrera 78b #49-55'} numero={'Contacto: 3218754620'} jefeTaller={'Jefe de Taller: Catalina Arango'} imagen={imagenMedellin} />
+      <Sucursal ciudad={'Bogota'} direction={'Dirección: calle 56 #11-20a'} numero={'Contacto: 3121475628'} jefeTaller={'Jefe de Taller: Diego Camacho'} imagen={imagenBogota} />
       <Footer/>
     </div>
   );
