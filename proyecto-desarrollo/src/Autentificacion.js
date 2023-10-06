@@ -10,5 +10,5 @@ export function authenticateUser(email, password) {
 	} else {
 	  return false; // Autenticación fallida
 	}
-  }
+}
   

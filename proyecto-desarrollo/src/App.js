@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import { Buscador } from './Components/Buscador/Buscador';
@@ -16,6 +16,8 @@ import sucursal3 from './images/sucursal3.jpg';
 // import { BackButton } from './Components/BackButton/BackButton';
 // import { CarroContainer } from './CarroContainer';
 import { Login } from './Login'
+import { Link, useNavigate } from 'react-router-dom';
+import { authenticateUser } from './Autentificacion';
 
 function App() {
   return (
@@ -105,9 +107,15 @@ function VistaAboutUs(){
 }
 
 function VistaLogin(){
+  const navigate = useNavigate();
+
+  const handleLoginSuccess = () => {
+    navigate('/');
+  };
+
   return (
     <div>
-      <Login/>
+      <Login onLoginSuccess={handleLoginSuccess} />
     </div>
   );
 }

@@ -1,12 +1,13 @@
 import './Login.css'
-import { Link } from 'react-router-dom'
-import { useHistory } from 'react-router-dom';
+import { Link} from 'react-router-dom'
 import { authenticateUser } from './Autentificacion'
 import React, { useState } from 'react';
 
-function Login(){
-	const [errorMsg, setErrorMsg] = useState('')
-	const history = useHistory();
+function Login({ onLoginSuccess }) {
+	const [email, setEmail] = useState('');
+  	const [password, setPassword] = useState('');
+  	const [errorMsg, setErrorMsg] = useState('');
+  	// const [redirectToHome, setRedirectToHome] = useState(false);
 
 	const handleLogin = async (e) => {
 		e.preventDefault();
@@ -17,9 +18,9 @@ function Login(){
 		const isAuthenticated = authenticateUser(email, password);
 	
 		if (isAuthenticated) {
-			history.push('/');
+			onLoginSuccess();
 		}else{
-			setErrorMsg('Authentication failed');
+			setErrorMsg('Datos Incorrectos');
 		}
 	};
 
@@ -30,11 +31,11 @@ function Login(){
 			<form onSubmit={handleLogin}>
         		<div className="form-group">
           			<label htmlFor="email">Correo Electrónico<span className="required">*</span> </label>
-          			<input type="email" id="email" name="email" required />
+          			<input type="email" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
         		</div>
         		<div className="form-group">
           			<label htmlFor="password">Contraseña<span className="required">*</span> </label>
-          			<input type="password" id="password" name="password" required />
+          			<input type="password" id="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
         		</div>
         		<div className="button-contenedor">
           			<button type="submit" className="login-boton">Iniciar Sesión</button>
