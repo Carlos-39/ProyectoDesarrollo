@@ -13,8 +13,9 @@ import { Sucursal } from './Components/Sucursal/Sucursal';
 import sucursal1 from './images/sucursal1.jpg';
 import sucursal2 from './images/sucursal2.jpg';
 import sucursal3 from './images/sucursal3.jpg';
-import { BackButton } from './Components/BackButton/BackButton';
-import { CarroContainer } from './CarroContainer';
+// import { BackButton } from './Components/BackButton/BackButton';
+// import { CarroContainer } from './CarroContainer';
+import { Login } from './Login'
 
 function App() {
   return (
@@ -106,8 +107,8 @@ function VistaAboutUs(){
 function VistaLogin(){
   return (
     <div>
-      <h1>¡Bienvenido! Por favor, inicia sesión.</h1>
-      <BackButton/>
+      <Login/>
+      {/* <BackButton/> */}
     </div>
   );
 }
