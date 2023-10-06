@@ -14,8 +14,9 @@ import sucursal2 from './images/sucursal2.jpg';
 import sucursal3 from './images/sucursal3.jpg';
 // import { BackButton } from './Components/BackButton/BackButton';
 // import { CarroContainer } from './CarroContainer';
-import { Login } from './Login'
+import { Login } from './Components/Login/Login';
 import { Link, useNavigate } from 'react-router-dom';
+import { SeguimientoVehiculos } from './SeguimientoVehiculos'
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/taller" element={<VistaTaller/>} />
         <Route path="/about-us" element={<VistaAboutUs/>} />
         <Route path="/login" element={<VistaLogin/>} />
+        <Route path="/seguimiento-vehiculos" element={<SeguimientoVehiculos />} />
       </Routes>
     </Router>
   );
@@ -86,6 +88,7 @@ function VistaTaller(){
       <Buscador/>
       <Header/>
       <Title title={'Taller'}/>
+      <Link to="/seguimiento-vehiculos">Ir a Seguimiento de Vehículos</Link>
       <Footer/>
     </div>
   );

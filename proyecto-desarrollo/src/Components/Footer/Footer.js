@@ -28,11 +28,7 @@ function Footer() {
 			<div className="footer-section desarrolladores">
 				<h3>Desarrollado por: </h3>
 				<ul>
-          			<li>nombre</li>
-          			<li>nombre</li>
-          			<li>nombre</li>
-		      		<li>nombre</li>
-		      		<li>nombre</li>
+          			<li>Electro X Team</li>
         		</ul>
       		</div>
 		</footer>
