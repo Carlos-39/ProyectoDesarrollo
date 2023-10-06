@@ -1,8 +1,8 @@
 export function authenticateUser(email, password) {
 
 	const userCredentials = {
-	  email: 'usuario@gmail.com',
-	  password: 'cliente123',
+	  email: 'jefeTaller@gmail.com',
+	  password: 'Jefe123',
 	};
   
 	if (email === userCredentials.email && password === userCredentials.password) {

@@ -16,7 +16,8 @@ import sucursal3 from './images/sucursal3.jpg';
 // import { CarroContainer } from './CarroContainer';
 import { Login } from './Components/Login/Login';
 import { Link, useNavigate } from 'react-router-dom';
-import { SeguimientoVehiculos } from './SeguimientoVehiculos'
+import { SeguimientoVehiculos } from './Modulo-jefeTaller/SeguimientoVehiculos'
+import { SoonTitle } from './Components/SoonTitle/SoonTitle';
 
 function App() {
   return (
@@ -59,6 +60,7 @@ function VistaCarros(){
       <Header/>
       <Title title={'Todos Nuestros Vehiculos'}/>
       {/* <CarroContainer/> */}
+      <SoonTitle title={'Coming Soon'}/>
       <Footer/>
     </div>
   );
