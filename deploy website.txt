@@ -1,0 +1,4 @@
+##while standing on the 'taller' folder location in
+##a command line. this might not work on windows shell
+venv\Scripts\activate
+py manage.py runserver
