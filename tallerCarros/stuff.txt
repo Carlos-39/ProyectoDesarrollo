@@ -1,0 +1,7 @@
+user:
+admin
+admin@gmail.common
+password:   adminadmin
+
+#test frontend. while standing on the 'client' directory
+npm run dev

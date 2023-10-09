@@ -1,0 +1,3 @@
+#clean Python 3.12.0 version let's see
+# node v18.18.0
+venv\Scripts\activate

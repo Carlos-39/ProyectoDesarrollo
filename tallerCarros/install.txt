@@ -1,0 +1,34 @@
+#clean Python 3.12.0 version let's see
+# node v18.18.0
+py -m venv venv
+venv\Scripts\activate
+pip install django
+pip install djangorestframework
+django-admin startproject django_crude_api .
+py manage.py startapp tasks
+#en settings.py installed_apps, añadir 'tasks'
+
+py manage.py migrate
+pip install django-cors-headers
+
+py manage.py startapp vehiculo
+py manage.py makemigrations
+py manage.py migrate
+
+py manage.py createsuperuser
+
+pip install coreapi
+
+#we'll create a vite project named 'client'
+npm create vite
+#choose react, javascript
+cd client
+npm install
+npm run dev     #just to test
+
+#you should still be standing in the client directory
+
+npm i react-router-dom react-hot-toast axios react-hook-form
+
+
+
