@@ -1,0 +1,54 @@
+.header-container{
+	background-color: #f2f4f5;
+	color: #1E1E1F;
+  	padding: 10px;
+  	text-align: center;
+}
+
+.titulo{
+	font-size: 55px;
+	text-align: center;
+	margin: 0;
+	padding: 15px;
+	font-weight: normal;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: bold;
+	position: relative;
+	text-shadow: 0px 0px 6px #0a0a0a;
+}
+
+nav{
+	background-color: #1E1E1F;
+	padding: 10px 0;
+	border-radius: 20px;
+}
+
+nav ul {
+	list-style: none;
+	padding: 0;
+	display: flex; /* Hace que los elementos de la lista se muestren en línea (horizontal) */
+	justify-content: center; /* Centra los elementos horizontalmente */
+}
+
+nav li {
+	margin: 0 10px; /* Espaciado entre elementos de la lista */
+	color: #f2f4f5;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	font-size: 100%;
+}
+
+nav a{
+	color: #f2f4f5;
+	text-decoration: none;
+	padding: 5px 10px;
+}
+
+nav a:hover {
+	background-color: #f2f4f5;
+	color: #1E1E1F;
+	border-radius: 15px;
+	font-weight: bold;
+}
