@@ -1,0 +1,7 @@
+##########GUIA PARA DESPLIEGAR EL PROYECTO EN SU PC
+#pararse en el directorioi tallerCarros.
+venv\Scripts\activate
+cd client
+npm install
+npm i react-router-dom react-hot-toast axios react-hook-form
+npm run dev
