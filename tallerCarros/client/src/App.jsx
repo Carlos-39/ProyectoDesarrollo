@@ -21,6 +21,7 @@ import { SoonTitle } from './Components/SoonTitle/SoonTitle';
 
 
 import { Navigation } from './Components/Navigation/Navigation';
+import { VehiculoList } from './Components/VehiculoList/VehiculoList';
 
 function App() {
   return (
@@ -29,6 +30,8 @@ function App() {
       {/* rutas para poder cambiar de vistas con sus respectivos renders */}
       <Routes>
         <Route path="/admin" element={<AdminPanel/>}/>
+        <Route path="/VehiculoList" element={<VehiculoListPage/>}/>
+
         <Route path="/" element={<Home/>}/>
         <Route path="/carros" element={<VistaCarros/>} />
         <Route path="/sucursales" element={<VistaSucursales/>} />
@@ -41,10 +44,18 @@ function App() {
   );
 }
 
+//task page
 function AdminPanel(){
   return (
     <div>
       <Navigation/>
+    </div>
+  );
+}
+function VehiculoListPage(){
+  return (
+    <div>
+      <VehiculoList/>
     </div>
   );
 }

@@ -5,3 +5,7 @@ cd client
 npm install
 npm i react-router-dom react-hot-toast axios react-hook-form
 npm run dev
+
+###aqui pondre cosas que yo puse en codigo para tratar de entender mejor
+
+-en la carpeta components, puse la carpeta 'Navigation' and 'VehiculoList'
