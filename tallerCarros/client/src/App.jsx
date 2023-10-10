@@ -16,8 +16,11 @@ import sucursal3 from './images/sucursal3.jpg';
 // import { CarroContainer } from './CarroContainer';
 import { Login } from './Components/Login/Login';
 import { Link, useNavigate } from 'react-router-dom';
-import { SeguimientoVehiculos } from './Modulo-jefeTaller/SeguimientoVehiculos'
+import { SeguimientoVehiculos } from './Modulo-jefeTaller/SeguimientoVehiculos';
 import { SoonTitle } from './Components/SoonTitle/SoonTitle';
+
+
+import { Navigation } from './Components/Navigation/Navigation';
 
 function App() {
   return (
@@ -25,6 +28,7 @@ function App() {
       {/* organizacion de toda la pagina web */}
       {/* rutas para poder cambiar de vistas con sus respectivos renders */}
       <Routes>
+        <Route path="/admin" element={<AdminPanel/>}/>
         <Route path="/" element={<Home/>}/>
         <Route path="/carros" element={<VistaCarros/>} />
         <Route path="/sucursales" element={<VistaSucursales/>} />
@@ -34,6 +38,14 @@ function App() {
         <Route path="/seguimiento-vehiculos" element={<SeguimientoVehiculos />} />
       </Routes>
     </Router>
+  );
+}
+
+function AdminPanel(){
+  return (
+    <div>
+      <Navigation/>
+    </div>
   );
 }
 

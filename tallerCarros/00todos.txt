@@ -1,5 +1,5 @@
 ##########GUIA PARA DESPLIEGAR EL PROYECTO EN SU PC
-#pararse en el directorioi tallerCarros.
+#pararse en el directorio tallerCarros
 venv\Scripts\activate
 cd client
 npm install
