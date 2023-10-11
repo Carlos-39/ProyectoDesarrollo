@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
 
 import { Buscador } from './Components/Buscador/Buscador';
 import { Header } from './Components/Header/Header';
@@ -21,7 +21,9 @@ import { SoonTitle } from './Components/SoonTitle/SoonTitle';
 
 
 import { Navigation } from './Components/Navigation/Navigation';
-import { VehiculoList } from './Components/VehiculoList/VehiculoList';
+import { VehiculoPage } from './Components/VehiculoList/VehiculoPage';
+import { VehiculoFormPage } from './Components/VehiculoList/VehiculoFormPage';
+import { Test22 } from './Components/VehiculoList/VehiculoFormPage';
 
 function App() {
   return (
@@ -29,8 +31,9 @@ function App() {
       {/* organizacion de toda la pagina web */}
       {/* rutas para poder cambiar de vistas con sus respectivos renders */}
       <Routes>
-        <Route path="/admin" element={<AdminPanel/>}/>
-        <Route path="/VehiculoList" element={<VehiculoListPage/>}/>
+        <Route path="/ad" element={<AdminPanel/>}/>
+        <Route path="/Vehiculo" element={<VehiculoPage/>}/>
+        <Route path="/VehiculoCreate" element={<VehiculoCreate/>}/>
 
         <Route path="/" element={<Home/>}/>
         <Route path="/carros" element={<VistaCarros/>} />
@@ -44,18 +47,31 @@ function App() {
   );
 }
 
-//task page
+//this will be a stand-in for 'app',
 function AdminPanel(){
   return (
     <div>
       <Navigation/>
+      <Routes>
+        <Route path="/Vehiculo" element={<VehiculoPage/>}/>
+      </Routes>
     </div>
   );
 }
-function VehiculoListPage(){
+
+//task page
+/* function VehiculoPage(){
   return (
     <div>
-      <VehiculoList/>
+      <VehiculoPage/>
+    </div>
+  );
+} */
+function VehiculoCreate(){
+  return (
+    <div>
+      <VehiculoFormPage/>
+      <Test22/>
     </div>
   );
 }

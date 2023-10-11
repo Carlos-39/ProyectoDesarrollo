@@ -1,4 +1,4 @@
-##########GUIA PARA DESPLIEGAR EL PROYECTO EN SU PC
+##########GUIA PARA DESPLIEGAR EL PROYECTO EN SU PC la PRIMERA VEZ
 #pararse en el directorio tallerCarros
 venv\Scripts\activate
 cd client
@@ -6,6 +6,11 @@ npm install
 npm i react-router-dom react-hot-toast axios react-hook-form
 npm run dev
 
-###aqui pondre cosas que yo puse en codigo para tratar de entender mejor
+##despues de esto, solo debes usar las siguientes lineas, estando parado en 'tallerCarros'
+venv\Scripts\activate
+cd client
+npm run dev
 
+###aqui pondre cosas que yo puse en codigo para tratar de entender mejor
 -en la carpeta components, puse la carpeta 'Navigation' and 'VehiculoList'
+-en la carpeta 'src', cree la carpeta 'api', aun no se para que
