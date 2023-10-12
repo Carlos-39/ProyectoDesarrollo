@@ -14,7 +14,7 @@ function Buscador(){
 
 			<div className="login-container">
 				<div className="login-content">
-					<Link to="./login" className="login-button">Acceder</Link>
+					<Link to="/login" className="login-button">Acceder</Link>
 				</div>
 			</div>
 		</div>

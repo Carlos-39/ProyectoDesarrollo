@@ -1,5 +1,5 @@
 import './Login.css'
-import { Link} from 'react-router-dom'
+import { Link, useNavigate} from 'react-router-dom'
 import { authenticateUser } from './Autentificacion'
 import React, { useState } from 'react';
 
@@ -8,6 +8,7 @@ function Login({ onLoginSuccess }) {
   	const [password, setPassword] = useState('');
   	const [errorMsg, setErrorMsg] = useState('');
 	const [showPassword, setShowPassword] = useState(false);
+	const navigate = useNavigate();
 
 	const handleLogin = async (e) => {
 		e.preventDefault();
@@ -53,6 +54,15 @@ function Login({ onLoginSuccess }) {
       		</form>
 			{errorMsg && <p className="error-message">{errorMsg}</p>}
 			<p className='back-home'>¿Deseas regresar? <Link to="../">Vuelve al Home</Link></p>
+
+
+			<p className='back-home'>¿Deseas regresar? 
+				<span style={{ cursor: 'pointer' }}
+					onClick={() => navigate(-1)}>Volver a la pagina anterior
+				</span>
+			</p>
+
+
 			</div>
 		</div>
 	);
