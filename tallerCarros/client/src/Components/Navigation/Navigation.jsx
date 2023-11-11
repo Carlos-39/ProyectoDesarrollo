@@ -7,8 +7,8 @@ function Navigation(){
             <h1>vehicle page</h1>
             </Link>
             <Link to="/VehiculoCreate">create task</Link>
-            <Link to="/VehiculoList">
-                <h1>vehicle list</h1>
+            <Link to="/VList">
+                <h1>v list</h1>
             </Link>
         </div>
     )
