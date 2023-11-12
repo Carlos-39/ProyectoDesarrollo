@@ -14,3 +14,10 @@ npm run dev
 ###aqui pondre cosas que yo puse en codigo para tratar de entender mejor
 -en la carpeta components, puse la carpeta 'Navigation' and 'VehiculoList'
 -en la carpeta 'src', cree la carpeta 'api', aun no se para que
+
+##############
+#######PROBANDO MAS
+
+#porfavor, en el servidor de postgres, que el usuario y contraseña
+#sea 'admin', para que no nos compliquemos
+

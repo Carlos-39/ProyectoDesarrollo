@@ -5,5 +5,9 @@
 //axios: the library that allows us to make petitions
 import axios from 'axios'
 export const getVehiculos = ()=>{
-    return axios.get('http://localhost:8000/vehiculo/api/v1/vehiculo/')
+    return axios.get('http://localhost:8000/t/api/v1/vehiculo/')
+}
+
+export function getVehiculo(id){
+    return axios.get('http://localhost:8000/t/api/v1/vehiculo/')
 }

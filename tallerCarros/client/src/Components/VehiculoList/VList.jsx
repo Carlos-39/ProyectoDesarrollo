@@ -15,7 +15,7 @@ export function VList(){
     return(
         <div>
             {Vehiculos.map(vehiculo =>(
-                <VehiculoCard key={vehiculo.id} vehiculo={vehiculo}/>
+                <VehiculoCard key={vehiculo.id_vehiculo} vehiculo={vehiculo}/>
             ))}
         </div>
     )
