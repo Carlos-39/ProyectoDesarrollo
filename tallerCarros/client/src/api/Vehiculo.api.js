@@ -8,6 +8,6 @@ export const getVehiculos = ()=>{
     return axios.get('http://localhost:8000/t/api/v1/vehiculo/')
 }
 
-export function getVehiculo(id){
+export function buscarVehiculo(modelo){
     return axios.get('http://localhost:8000/t/api/v1/vehiculo/')
 }

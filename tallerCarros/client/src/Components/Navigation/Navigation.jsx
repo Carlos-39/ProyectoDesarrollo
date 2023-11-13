@@ -10,6 +10,9 @@ function Navigation(){
             <Link to="/VList">
                 <h1>v list</h1>
             </Link>
+            <Link to="/SucursalList">
+                <h1>lista sucursales</h1>
+            </Link>
         </div>
     )
 }

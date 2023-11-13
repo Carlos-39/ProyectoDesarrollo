@@ -1,5 +1,6 @@
 
 
+//{} means object destructuring, taking the vehiculo json from the response I think
 export function VehiculoCard({vehiculo}){
     return(
         <div>

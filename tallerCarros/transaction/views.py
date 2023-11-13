@@ -2,6 +2,8 @@ from django.shortcuts import render
 
 # Create your views here.
 from rest_framework import viewsets
+from rest_framework.response import Response
+from rest_framework.decorators import action
 
 #we'll import the serializers we created, and save it in a serializer class
 from .serializers import ClienteSerializer
@@ -54,3 +56,36 @@ class UsuarioView(viewsets.ModelViewSet):
 class VehiculoView(viewsets.ModelViewSet):
     serializer_class= VehiculoSerializer
     queryset=Vehiculo.objects.all()
+
+    @action(detail=False, methods=['GET'])
+    def getVehiculoColor(self, request):
+        # Your custom logic goes here
+        data = {'message': 'This is a custom function'}
+        input_value = request.query_params.get('input',None)
+        input_value=input_value[0].capitalize()+input_value[1:]
+        query = Vehiculo.objects.values('id_vehiculo', 'modelo', 'color').filter(color=input_value)
+        return Response(query)
+    
+    @action(detail=False, methods=['GET'])
+    def getVehiculoMarca(self, request):
+        input_value = request.query_params.get('input',None)
+        
+        for i in range(len(input_value)):
+            if input_value[i]==' ':
+                input_value[i]='_'
+        
+        query = Vehiculo.objects.values('id_vehiculo', 'marca').filter(marca=input_value)
+        return Response(query)
+    
+    """ @action(detail=False, methods=['GET'])
+    def getVehiculoId(self, request):
+        input_value = request.query_params.get('input',None)
+        try:
+            #input_value = int(input_value)
+            input_value = input_value
+        except (ValueError, TypeError):
+            return Response({"error": "Invalid input. Please provide a valid integer."}, status=400)
+        
+        query = Vehiculo.objects.values('id_vehiculo', 'modelo', 'color').filter(color=input_value)
+        return Response(query) """
+        

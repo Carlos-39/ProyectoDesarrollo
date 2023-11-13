@@ -25,6 +25,7 @@ import { VehiculoPage } from './Components/VehiculoList/VehiculoPage';
 import { VehiculoFormPage } from './Components/VehiculoList/VehiculoFormPage';
 import { Test22 } from './Components/VehiculoList/VehiculoFormPage';
 import { VList } from './Components/VehiculoList/VList';
+import { SucursalList } from './Components/VehiculoList/SucursalList';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
         <Route path="/Vehiculo" element={<VehiculoPage/>}/>
         <Route path="/VehiculoCreate" element={<VehiculoCreate/>}/>
         <Route path="/VList" element={<VList/>}/>
+        <Route path="/SucursalList" element={<SucursalList/>}/>
 
         <Route path="/" element={<Home/>}/>
         <Route path="/carros" element={<VistaCarros/>} />
