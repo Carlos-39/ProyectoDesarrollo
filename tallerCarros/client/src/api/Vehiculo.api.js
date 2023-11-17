@@ -8,6 +8,18 @@ export const getVehiculos = ()=>{
     return axios.get('http://localhost:8000/t/api/v1/vehiculo/')
 }
 
+export const GetVehiculoAPI = (vehicleId)=>{
+  return axios.get(`http://localhost:8000/t/api/v1/vehiculo/${vehicleId}`)
+  .then(response => {
+    console.log('single Vehicle loaded successfully:', response);
+      // Add any additional logic you need after successful deletion
+})
+.catch(error => {
+    console.error('Error cargando vehiculo:', error);
+      // Handle errors as needed
+});
+}
+
 export const DeleteVehiculo = (vehicleId) => {
       // Call your deleteVehiculo function with the entered ID
     return axios.delete(`http://localhost:8000/t/api/v1/vehiculo/${vehicleId}`)
