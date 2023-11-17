@@ -109,7 +109,7 @@ class Usuario(models.Model):
 
 
 class Vehiculo(models.Model):
-    id_vehiculo = models.IntegerField(primary_key=True)
+    id_vehiculo = models.AutoField(primary_key=True)
     marca = models.CharField(max_length=50, blank=True, null=True)
     modelo = models.CharField(max_length=50, blank=True, null=True)
     anio = models.IntegerField(blank=True, null=True)

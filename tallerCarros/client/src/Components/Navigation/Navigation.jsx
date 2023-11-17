@@ -13,6 +13,15 @@ function Navigation(){
             <Link to="/SucursalList">
                 <h1>lista sucursales</h1>
             </Link>
+            <Link to="/DelVehiculo">
+                <h1>borrar vehiculo</h1>
+            </Link> 
+            <Link to="/PostVehiculo">
+                <h1>crear vehiculo</h1>
+            </Link>
+            <Link to="/PutVehiculo">
+                <h1>modificar vehiculo</h1>
+            </Link>
         </div>
     )
 }

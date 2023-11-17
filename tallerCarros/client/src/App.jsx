@@ -26,6 +26,9 @@ import { VehiculoFormPage } from './Components/VehiculoList/VehiculoFormPage';
 import { Test22 } from './Components/VehiculoList/VehiculoFormPage';
 import { VList } from './Components/VehiculoList/VList';
 import { SucursalList } from './Components/VehiculoList/SucursalList';
+import { DelVehiculo } from './Components/VehiculoList/DelVehiculo';
+import { PostVehiculo } from './Components/VehiculoList/PostVehiculo';
+import { PutVehiculo } from './Components/VehiculoList/PutVehiculo';
 
 function App() {
   return (
@@ -38,6 +41,9 @@ function App() {
         <Route path="/VehiculoCreate" element={<VehiculoCreate/>}/>
         <Route path="/VList" element={<VList/>}/>
         <Route path="/SucursalList" element={<SucursalList/>}/>
+        <Route path="/DelVehiculo" element={<DelVehiculo/>}/>
+        <Route path="/PostVehiculo" element={<PostVehiculo/>}/>
+        <Route path="/PutVehiculo" element={<PutVehiculo/>}/>
 
         <Route path="/" element={<Home/>}/>
         <Route path="/carros" element={<VistaCarros/>} />
@@ -62,7 +68,6 @@ function AdminPanel(){
     </div>
   );
 }
-
 function VehiculoCreate(){
   return (
     <div>
@@ -71,6 +76,10 @@ function VehiculoCreate(){
     </div>
   );
 }
+
+
+
+
 
 function Home(){
   return (
