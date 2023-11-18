@@ -5,13 +5,14 @@
 //axios: the library that allows us to make petitions
 import axios from 'axios'
 export const getVehiculos = ()=>{
-    return axios.get('http://localhost:8000/t/api/v1/vehiculo/')
+    return axios.get('http://localhost:8000/t/api/vehiculo/')
 }
 
 export const GetVehiculoAPI = (vehicleId)=>{
-  return axios.get(`http://localhost:8000/t/api/v1/vehiculo/${vehicleId}`)
+  return axios.get(`http://localhost:8000/t/api/vehiculo/${vehicleId}`)
   .then(response => {
     console.log('single Vehicle loaded successfully:', response);
+    return response.data;
       // Add any additional logic you need after successful deletion
 })
 .catch(error => {
@@ -20,9 +21,9 @@ export const GetVehiculoAPI = (vehicleId)=>{
 });
 }
 
-export const DeleteVehiculo = (vehicleId) => {
+export const DeleteVehiculoAPI = (vehicleId) => {
       // Call your deleteVehiculo function with the entered ID
-    return axios.delete(`http://localhost:8000/t/api/v1/vehiculo/${vehicleId}`)
+    return axios.delete(`http://localhost:8000/t/api/vehiculo/${vehicleId}`)
     .then(response => {
         console.log('Vehicle deleted successfully:', response);
           // Add any additional logic you need after successful deletion
@@ -34,7 +35,7 @@ export const DeleteVehiculo = (vehicleId) => {
 };
 
 export const PostVehiculoAPI = (formData) => {
-    axios.post('http://localhost:8000/t/api/v1/vehiculo/', formData)
+    axios.post('http://localhost:8000/t/api/vehiculo/', formData)
       .then(response => {
         console.log('Vehicle added successfully:', response);
         // Add any additional logic you need after successful addition
@@ -46,7 +47,7 @@ export const PostVehiculoAPI = (formData) => {
   };
 
 export const PutVehiculoAPI = (vehicleId, updatedData) => {
-  return axios.put(`http://localhost:8000/t/api/v1/vehiculo/${vehicleId}/`, updatedData)
+  return axios.put(`http://localhost:8000/t/api/vehiculo/${vehicleId}/`, updatedData)
     .then(response => {
       console.log('Vehicle updated successfully:', response);
       // Add any additional logic you need after successful update

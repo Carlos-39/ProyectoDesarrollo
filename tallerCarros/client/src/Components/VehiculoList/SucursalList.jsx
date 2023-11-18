@@ -1,12 +1,12 @@
 import {useEffect,useState} from 'react'
-import { getSucursales } from '../../api/Sucursal.api';
+import { GetSucursales } from '../../api/Sucursal.api';
 import {SucursalCard} from './SucursalCard'
 export function SucursalList(){
     const[Sucursales,setSucursal]=useState([])
     useEffect(()=> {
         console.log("pagina cargada");
         async function loadSucursales(){
-            const res= await getSucursales();
+            const res= await GetSucursales();
             console.log(res);
             setSucursal(res.data);
         }

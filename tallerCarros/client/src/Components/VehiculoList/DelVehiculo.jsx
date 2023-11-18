@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { DeleteVehiculo } from '../../api/Vehiculo.api';
+import { DeleteVehiculoAPI } from '../../api/Vehiculo.api';
 
 const DeleteVehicleForm = () => {
   const [vehicleId, setVehicleId] = useState('');
 
   //esto llamara a la funcion del api
   const handleDelete = () => {
-    DeleteVehiculo(vehicleId)
+    DeleteVehiculoAPI(vehicleId)
       .then(response => {
         console.log('el vehiculo fue borrado:', response);
         // Add any additional logic you need after successful deletion

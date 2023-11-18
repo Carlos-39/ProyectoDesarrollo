@@ -21,6 +21,19 @@ const UpdateVehicleForm = () => {
         [e.target.name]: e.target.value,
       });
     };
+
+    const fillInfo = async () => {
+      try {
+        const id=vehicleData.id_vehiculo;
+        const auxVec = await GetVehiculoAPI(id);
+        console.log('macarena');
+        console.log(auxVec);
+        setVehicleData(auxVec);
+      } catch (error) {
+        console.error('Error updating vehicle info:', error);
+        // Handle errors as needed
+      }
+    };
   
     const handleUpdate = () => {
         PutVehiculoAPI(vehicleData.id_vehiculo, vehicleData)
@@ -32,32 +45,7 @@ const UpdateVehicleForm = () => {
           setError(err.message || 'ocurrio un error, no se de que, pero estoy seguro de que el usuario tiene la culpa');
         });
     };
-    const handleGetVehiculo = () => {
-      const auxVec= GetVehiculoAPI(vehicleData.id_vehiculo)
-      .then(response => {
-        console.log('se consiguio el vehiculo y pone un mensaje para ellos si queres', response);
-      })
-      .catch(err => {
-        console.error('hubo un error, el vehiculo no existe', err);
-        setError(err.message || 'ocurrio un error, no se de que, pero estoy seguro de que el usuario tiene la culpa');
-      });
-      setVehicleData(auxVec);
-      /* const [VehiculoACambiar, setVehiculo] = useState('');
-      useEffect(() => {
-        console.log("tratando de conseguir vehiculo");
-        const id_vehiculo = 1;
-        async function loadVehiculo(var1) {
-          try {
-            const res = await GetVehiculoAPI(var1);
-            console.log(res);
-            setVehiculo(res.data);
-          } catch (error) {
-            console.error('Error loading vehicle:', error);
-          }
-        }
-        loadVehiculo(VehiculoACambiar);
-      }, []); */
-    };
+    
     return (
       <div>
         <h1>Update Vehicle</h1>
@@ -72,7 +60,7 @@ const UpdateVehicleForm = () => {
               onChange={handleInputChange}
               required
             />
-            <button type="button" onClick={handleGetVehiculo}>get info del vehiculo</button>
+            <button type="button" onClick={fillInfo}>get info del vehiculo</button>
           </div>
           <div>
             <label htmlFor="marca">Marca:</label>
