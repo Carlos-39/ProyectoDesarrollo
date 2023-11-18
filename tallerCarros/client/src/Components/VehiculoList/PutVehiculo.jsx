@@ -1,3 +1,4 @@
+import '../Sucursal/Sucursal.css'
 import React, { useState, useEffect } from 'react';
 import { PutVehiculoAPI } from '../../api/Vehiculo.api';
 import { GetVehiculoAPI } from '../../api/Vehiculo.api';
@@ -47,10 +48,10 @@ const UpdateVehicleForm = () => {
     };
     
     return (
-      <div>
-        <h1>Update Vehicle</h1>
+      <div className="information-container">
+        <h1 className="information-container">Update Vehicle</h1>
         <form>
-          <div>
+          <div className="information-container">
             <label htmlFor="id_vehiculo">Vehicle ID:</label>
             <input
               type="number"
@@ -62,7 +63,7 @@ const UpdateVehicleForm = () => {
             />
             <button type="button" onClick={fillInfo}>get info del vehiculo</button>
           </div>
-          <div>
+          <div className="information-container">
             <label htmlFor="marca">Marca:</label>
             <input
               type="text"
@@ -73,7 +74,7 @@ const UpdateVehicleForm = () => {
               required
             />
           </div>
-          <div>
+          <div className='h1-ciudad'>
             <label htmlFor="modelo">Modelo:</label>
             <input
                 type="text"
@@ -84,7 +85,7 @@ const UpdateVehicleForm = () => {
                 required
             />
             </div>
-        <div>
+        <div className='h1-ciudad'>
           <label htmlFor="anio">Año:</label>
           <input
             type="number"
@@ -95,7 +96,7 @@ const UpdateVehicleForm = () => {
             required
           />
         </div>
-        <div>
+        <div className='h1-ciudad'>
           <label htmlFor="disponibilidad">disponibilidad:</label>
           <input
             type="number"
@@ -106,7 +107,7 @@ const UpdateVehicleForm = () => {
             required
           />
         </div>
-        <div>
+        <div className='h1-ciudad'>
           <label htmlFor="precio">Precio:</label>
           <input
             type="number"
@@ -117,7 +118,7 @@ const UpdateVehicleForm = () => {
             required
           />
         </div>
-        <div>
+        <div className='p-sucursal'>
           <label htmlFor="color">Color:</label>
           <input
             type="text"
@@ -128,7 +129,7 @@ const UpdateVehicleForm = () => {
             required
           />
         </div>
-        <div>
+        <div className='p-sucursal'>
           <label htmlFor="descripcion">Descripción:</label>
           <input
             type="text"
@@ -149,7 +150,7 @@ const UpdateVehicleForm = () => {
 
 export function PutVehiculo() {
     return (
-      <div>
+      <div className="footer-section">
         {/* Other components */}
         <UpdateVehicleForm />
       </div>

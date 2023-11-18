@@ -1,7 +1,7 @@
 export function SucursalCard({sucursal}){
     return(
-        <div>
-            <h1>{sucursal.id_sucursal}</h1>
+        <div className="information-container">
+            <h1 className='h1-ciudad'>{sucursal.id_sucursal}</h1>
             <h1>{sucursal.nombre}</h1>
             <h1>{sucursal.direccion}</h1>
             <h1>{sucursal.telefono}</h1>

@@ -1,4 +1,5 @@
-import {useEffect,useState} from 'react'
+import '../Sucursal/Sucursal.css'
+import {useEffect,useState} from 'react';
 import { GetSucursales } from '../../api/Sucursal.api';
 import {SucursalCard} from './SucursalCard'
 export function SucursalList(){
@@ -13,7 +14,7 @@ export function SucursalList(){
         loadSucursales();
     },[]);
     return(
-        <div>
+        <div className="sucursal-container">
             {Sucursales.map(sucursal =>(
                 <SucursalCard key={sucursal.id_sucursal} sucursal={sucursal}/>
             ))}
