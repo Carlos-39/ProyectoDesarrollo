@@ -29,7 +29,7 @@ export const DeleteUsuarioAPI = (id_usuario) => {
     });
 };
 
-export const PostVehiculoAPI = (formData) => {
+export const PostUsuarioAPI = (formData) => {
     axios.post('http://localhost:8000/t/api/usuario/', formData)
       .then(response => {
         console.log('usuario added successfully:', response);
