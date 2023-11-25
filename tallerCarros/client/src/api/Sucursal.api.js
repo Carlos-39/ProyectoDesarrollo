@@ -3,8 +3,8 @@ export const GetSucursales = ()=>{
     return axios.get('http://localhost:8000/t/api/sucursal/')
 }
 
-export const GetSucursalAPI = (usuarioId)=>{
-  return axios.get(`http://localhost:8000/t/api/sucursal/${usuarioId}`)
+export const GetSucursalAPI = (id_sucursal)=>{
+  return axios.get(`http://localhost:8000/t/api/sucursal/${id_sucursal}`)
   .then(response => {
     console.log('sucursal individual cargada exitosamente:', response);
     return response.data;
@@ -16,9 +16,9 @@ export const GetSucursalAPI = (usuarioId)=>{
 });
 }
 
-export const DeleteSucursalAPI = (id_usuario) => {
+export const DeleteSucursalAPI = (id_sucursal) => {
       // Call your deleteVehiculo function with the entered ID
-    return axios.delete(`http://localhost:8000/t/api/sucursal/${id_usuario}`)
+    return axios.delete(`http://localhost:8000/t/api/sucursal/${id_sucursal}`)
     .then(response => {
         console.log('sucursal borrado exitosamente:', response);
           // Add any additional logic you need after successful deletion
@@ -41,8 +41,8 @@ export const PostSucursalAPI = (formData) => {
       });
   };
 
-export const PutSucursalAPI = (id_usuario, updatedData) => {
-  return axios.put(`http://localhost:8000/t/api/sucursal/${id_usuario}/`, updatedData)
+export const PutSucursalAPI = (id_sucursal, updatedData) => {
+  return axios.put(`http://localhost:8000/t/api/sucursal/${id_sucursal}/`, updatedData)
     .then(response => {
       console.log('sucursal fue actualizado:', response);
       // Add any additional logic you need after successful update

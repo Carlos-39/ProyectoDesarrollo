@@ -1,6 +1,7 @@
 ----------------Base de datos para el concesionario de Carros--------------------------------
 
 -- Tabla Sucursal
+DROP TABLE IF EXISTS Sucursal cascade;
 CREATE TABLE Sucursal (
     ID_Sucursal INT PRIMARY KEY,
     Nombre VARCHAR(50),
@@ -9,6 +10,7 @@ CREATE TABLE Sucursal (
 );
 
 -- Tabla Usuario
+DROP TABLE IF EXISTS Usuario cascade;
 CREATE TABLE Usuario (
     ID_Usuario INT PRIMARY KEY,
     Nombre VARCHAR(50),
@@ -19,6 +21,7 @@ CREATE TABLE Usuario (
 );
 
 -- Tabla Cliente
+DROP TABLE IF EXISTS Cliente cascade;
 CREATE TABLE Cliente (
     ID_Cliente INT PRIMARY KEY,
 	DocIdentificacion INT NOT NULL,
@@ -43,6 +46,7 @@ CREATE TABLE Vehiculo (
 );
 
 -- Tabla Cotizacion
+DROP TABLE IF EXISTS Cotizacion cascade;
 CREATE TABLE Cotizacion (
     ID_Cotizacion INT PRIMARY KEY,
     Fecha DATE,
@@ -60,6 +64,7 @@ CREATE TABLE Cotizacion (
 );
 
 -- Tabla Repuesto
+DROP TABLE IF EXISTS Repuesto cascade;
 CREATE TABLE Repuesto (
     ID_Repuesto INT PRIMARY KEY,
     Nombre VARCHAR(50),
@@ -70,6 +75,7 @@ CREATE TABLE Repuesto (
 
 
 -- Tabla OrdenReparacion
+DROP TABLE IF EXISTS OrdenReparacion cascade;
 CREATE TABLE OrdenReparacion (
     ID_OrdenReparacion INT PRIMARY KEY,
     FechaInicio DATE,
@@ -91,6 +97,7 @@ CREATE TABLE OrdenReparacion (
 );
 
 -----Tabla muchos a muchos entre vehiculo y repuesto--------------------------------
+DROP TABLE IF EXISTS Posee cascade;
 CREATE TABLE Posee (
     ID_Vehiculo INT,
     ID_Repuesto INT,
@@ -135,4 +142,5 @@ INSERT INTO OrdenReparacion (ID_OrdenReparacion, FechaInicio, FechaFin, Descripc
 
 INSERT INTO Posee (ID_Vehiculo, ID_Repuesto) VALUES
 (1, 1),
+(1, 2),
 (2, 2);

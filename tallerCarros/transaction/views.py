@@ -77,6 +77,13 @@ class VehiculoView(viewsets.ModelViewSet):
         query = Vehiculo.objects.values('id_vehiculo', 'marca').filter(marca=input_value)
         return Response(query)
     
+    @action(detail=False, methods=['GET'])
+    def searchVehiculo(self, request):
+        input_value = request.query_params.get('input',None)
+        
+        query = Vehiculo.objects.values('id_vehiculo', 'marca').filter(marca=input_value)
+        return Response(query)
+    
     """ @action(detail=False, methods=['GET'])
     def getVehiculoId(self, request):
         input_value = request.query_params.get('input',None)
