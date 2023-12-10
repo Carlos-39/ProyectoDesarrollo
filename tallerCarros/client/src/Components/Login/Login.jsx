@@ -19,7 +19,7 @@ function Login({ onLoginSuccess }) {
 		const isAuthenticated = authenticateUser(email, password);
 	
 		if (isAuthenticated) {
-			onLoginSuccess();
+			onLoginSuccess(isAuthenticated);
 		}else{
 			setErrorMsg('Datos Incorrectos, intenta de nuevo');
 		}

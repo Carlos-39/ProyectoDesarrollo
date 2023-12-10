@@ -2,7 +2,7 @@ import './Buscador.css'
 import { Link } from 'react-router-dom'
 import LupaIcon from '../../images/lupa.png'
 
-function Buscador({logged}){
+function Buscador({logged, userRole}){
  return(
   <div className="section-container">
    <div className="search-container">
@@ -14,7 +14,7 @@ function Buscador({logged}){
 
    <div className="login-container">
     <div className="login-content">
-     {!logged && <Link to="/login" className="login-button">Acceder</Link>}
+     {logged ? userRole : <Link to="/login" className="login-button">Acceder</Link>}
     </div>
    </div>
   </div>

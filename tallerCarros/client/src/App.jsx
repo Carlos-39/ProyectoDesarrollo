@@ -43,6 +43,7 @@ function App() {
   };
 
   const [logged, setLogged] = useState(false);
+  const [userRole, setUserRole] = useState('');
     
   
   return (
@@ -63,12 +64,12 @@ function App() {
         <Route path="/PostVehiculo" element={<PostVehiculo/>}/>
         <Route path="/PutVehiculo" element={<PutVehiculo/>}/>
 
-        <Route path="/" element={<Home logged={logged}/>}/>
+        <Route path="/" element={<Home userRole={userRole} logged={logged}/>}/>
         <Route path="/carros" element={<VistaCarros/>} />
         <Route path="/sucursales" element={<VistaSucursales/>} />
         <Route path="/taller" element={<VistaTaller/>} />
         <Route path="/about-us" element={<VistaAboutUs/>} />
-        <Route path="/login" element={<VistaLogin setLogged={() => setLogged(true)}/>} />
+        <Route path="/login" element={<VistaLogin setLogged={() => setLogged(true)} setUserRole={setUserRole} />} />
         <Route path="/seguimiento-vehiculos" element={<SeguimientoVehiculos />} />
       </Routes>
     </Router>
@@ -102,10 +103,10 @@ function VehiculoCreate(){
 
 
 
-function Home({logged}){
+function Home({logged, userRole}){
   return (
     <div>
-      <Buscador logged={logged} />
+      <Buscador userRole={userRole} logged={logged} />
       <Header/>
       <Slogan/>
       <Title title={'Últimos Lanzamientos'}/>
@@ -172,10 +173,11 @@ function VistaAboutUs(){
   );
 }
 
-function VistaLogin({setLogged}){
+function VistaLogin({setLogged, setUserRole}){
   const navigate = useNavigate();
 
-  const handleLoginSuccess = () => {
+  const handleLoginSuccess = (userRole) => {
+    setUserRole(userRole)
     setLogged();
     navigate('/');
   };
