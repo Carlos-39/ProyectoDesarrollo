@@ -1,3 +1,6 @@
+import './App.css'
+import { useState } from 'react';
+
 import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
 
 import { Buscador } from './Components/Buscador/Buscador';
@@ -14,6 +17,7 @@ import sucursal2 from './images/sucursal2.jpg';
 import sucursal3 from './images/sucursal3.jpg';
 // import { BackButton } from './Components/BackButton/BackButton';
 // import { CarroContainer } from './CarroContainer';
+// <Navigation />
 import { Login } from './Components/Login/Login';
 import { Link, useNavigate } from 'react-router-dom';
 import { SeguimientoVehiculos } from './Modulo-jefeTaller/SeguimientoVehiculos';
@@ -30,12 +34,26 @@ import { DelVehiculo } from './Components/VehiculoList/DelVehiculo';
 import { PostVehiculo } from './Components/VehiculoList/PostVehiculo';
 import { PutVehiculo } from './Components/VehiculoList/PutVehiculo';
 
+import { useTranslation} from 'react-i18next'
+
 function App() {
+  const {t, i18n} = useTranslation();
+  const functionCambiarLenguaje = (leng) => {
+    i18n.changeLanguage(leng)
+  };
+
+  const [logged, setLogged] = useState(false);
+    
+  
   return (
-    <Router>
-      {/* organizacion de toda la pagina web */}
-      {/* rutas para poder cambiar de vistas con sus respectivos renders */}
-      <Routes>
+    <>
+    <p>{t("MENSAJE")}</p>
+    <button onClick={() => functionCambiarLenguaje("es")}>Español</button>
+    <button onClick={() => functionCambiarLenguaje("en")}>Inglés</button>
+    <button onClick={() => functionCambiarLenguaje("pt")}>Portugues</button>
+     <Router>
+         
+         <Routes>
         <Route path="/ad" element={<AdminPanel/>}/>
         <Route path="/Vehiculo" element={<VehiculoPage/>}/>
         <Route path="/VehiculoCreate" element={<VehiculoCreate/>}/>
@@ -45,17 +63,20 @@ function App() {
         <Route path="/PostVehiculo" element={<PostVehiculo/>}/>
         <Route path="/PutVehiculo" element={<PutVehiculo/>}/>
 
-        <Route path="/" element={<Home/>}/>
+        <Route path="/" element={<Home logged={logged}/>}/>
         <Route path="/carros" element={<VistaCarros/>} />
         <Route path="/sucursales" element={<VistaSucursales/>} />
         <Route path="/taller" element={<VistaTaller/>} />
         <Route path="/about-us" element={<VistaAboutUs/>} />
-        <Route path="/login" element={<VistaLogin/>} />
+        <Route path="/login" element={<VistaLogin setLogged={() => setLogged(true)}/>} />
         <Route path="/seguimiento-vehiculos" element={<SeguimientoVehiculos />} />
       </Routes>
     </Router>
+    </>
   );
 }
+
+
 
 //this will be a stand-in for 'app',
 function AdminPanel(){
@@ -81,10 +102,10 @@ function VehiculoCreate(){
 
 
 
-function Home(){
+function Home({logged}){
   return (
     <div>
-      <Buscador/>
+      <Buscador logged={logged} />
       <Header/>
       <Slogan/>
       <Title title={'Últimos Lanzamientos'}/>
@@ -94,7 +115,6 @@ function Home(){
     </div>
   );
 }
-
 //Renderizado de la vista de carros
 function VistaCarros(){
   return (
@@ -152,10 +172,11 @@ function VistaAboutUs(){
   );
 }
 
-function VistaLogin(){
+function VistaLogin({setLogged}){
   const navigate = useNavigate();
 
   const handleLoginSuccess = () => {
+    setLogged();
     navigate('/');
   };
 
