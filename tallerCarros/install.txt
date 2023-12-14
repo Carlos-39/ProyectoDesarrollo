@@ -28,7 +28,6 @@ npm run dev     #just to test
 
 #you should still be standing in the client directory
 
-npm i react-router-dom react-hot-toast axios react-hook-form
-
+npm i react-router-dom react-hot-toast axios react-hook-form i18next react-i18next
 
 

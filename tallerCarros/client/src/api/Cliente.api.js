@@ -1,5 +1,5 @@
 import axios from 'axios'
-export const getClientes = ()=>{
+export const GetClientes = ()=>{
     return axios.get('http://localhost:8000/t/api/cliente/')
 }
 
@@ -16,7 +16,7 @@ export const GetClienteAPI = (id_cliente)=>{
 });
 }
 
-export const DeleteUsuarioAPI = (id_cliente) => {
+export const DeleteClienteAPI = (id_cliente) => {
       // Call your deleteVehiculo function with the entered ID
     return axios.delete(`http://localhost:8000/t/api/cliente/${id_cliente}`)
     .then(response => {
@@ -29,7 +29,7 @@ export const DeleteUsuarioAPI = (id_cliente) => {
     });
 };
 
-export const PostUsuarioAPI = (formData) => {
+export const PostClienteAPI = (formData) => {
     axios.post('http://localhost:8000/t/api/cliente/', formData)
       .then(response => {
         console.log('cliente añadido successfully:', response);
@@ -41,7 +41,7 @@ export const PostUsuarioAPI = (formData) => {
       });
   };
 
-export const PutUsuarioAPI = (id_cliente, updatedData) => {
+export const PutClienteAPI = (id_cliente, updatedData) => {
   return axios.put(`http://localhost:8000/t/api/cliente/${id_cliente}/`, updatedData)
     .then(response => {
       console.log('cliente fue actualizado:', response);

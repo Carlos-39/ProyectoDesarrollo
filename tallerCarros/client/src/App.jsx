@@ -34,6 +34,12 @@ import { DelVehiculo } from './Components/VehiculoList/DelVehiculo';
 import { PostVehiculo } from './Components/VehiculoList/PostVehiculo';
 import { PutVehiculo } from './Components/VehiculoList/PutVehiculo';
 
+import { NavCliente } from './Components/ClienteList/NavCliente';
+import { DelCliente } from './Components/ClienteList/DelCliente';
+import { PostCliente } from './Components/ClienteList/PostCliente';
+import { PutCliente } from './Components/ClienteList/PutCliente';
+import { ClienteList } from './Components/ClienteList/ClienteList';
+
 import { useTranslation} from 'react-i18next'
 
 function App() {
@@ -63,6 +69,12 @@ function App() {
         <Route path="/DelVehiculo" element={<DelVehiculo/>}/>
         <Route path="/PostVehiculo" element={<PostVehiculo/>}/>
         <Route path="/PutVehiculo" element={<PutVehiculo/>}/>
+
+        <Route path="/clienteCRUD" element={<ClienteCRUD/>}/>
+        <Route path="/DelCliente" element={<DelCliente/>}/>
+        <Route path="/PostCliente" element={<PostCliente/>}/>
+        <Route path="/PutCliente" element={<PutCliente/>}/>
+        <Route path="/ClienteList" element={<ClienteList/>}/>
 
         <Route path="/" element={<Home userRole={userRole} logged={logged}/>}/>
         <Route path="/carros" element={<VistaCarros/>} />
@@ -99,7 +111,13 @@ function VehiculoCreate(){
   );
 }
 
-
+function ClienteCRUD(){
+  return (
+    <div>
+      <NavCliente/>
+    </div>
+  );
+}
 
 
 
