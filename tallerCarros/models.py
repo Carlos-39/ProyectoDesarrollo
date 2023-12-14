@@ -60,6 +60,18 @@ class Ordenreparacion(models.Model):
         app_label='transaction'
 
 
+""" class Posee(models.Model):
+    id_vehiculo = models.ForeignKey('Vehiculo', db_column='id_vehiculo',on_delete=models.CASCADE)  # The composite primary key (id_vehiculo, id_repuesto) found, that is not supported. The first column is selected.
+    id_repuesto = models.ForeignKey('Repuesto', db_column='id_repuesto',on_delete=models.CASCADE)
+
+    class Meta:
+        managed = False
+        db_table = 'posee'
+        #unique_together = (('id_vehiculo', 'id_repuesto'),)
+        app_label='transaction'
+        constraints = [
+            models.UniqueConstraint(fields=['id_vehiculo', 'id_repuesto'], name='unique_posee')
+        ] """
 class Posee(models.Model):
     id_vehiculo = models.OneToOneField('Vehiculo', models.DO_NOTHING, db_column='id_vehiculo', primary_key=True)  # The composite primary key (id_vehiculo, id_repuesto) found, that is not supported. The first column is selected.
     id_repuesto = models.ForeignKey('Repuesto', models.DO_NOTHING, db_column='id_repuesto')

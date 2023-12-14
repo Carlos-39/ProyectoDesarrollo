@@ -106,6 +106,15 @@ CREATE TABLE Posee (
     PRIMARY KEY (ID_Vehiculo, ID_Repuesto) -- Definición de clave primaria compuesta
 );
 
+-----Tabla del historial--------------------------------
+DROP TABLE IF EXISTS Historial cascade;
+CREATE TABLE Historial (
+    id_historial SERIAL PRIMARY KEY,
+    fecha DATE,
+    tipo_de_actualizacion TEXT,
+    info JSON
+);
+
 -------------------DATOS---------------
 
 ------Sucursal date-------------

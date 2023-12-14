@@ -84,7 +84,7 @@ WSGI_APPLICATION = 'taller.wsgi.application'
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 } """
-DATABASES = {
+""" DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'taller',
@@ -93,8 +93,8 @@ DATABASES = {
         'HOST':'localhost',
         'PORT':'5432',
     }
-}
-""" DATABASES = {
+} """
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'kwyluvfo',
@@ -103,7 +103,7 @@ DATABASES = {
         'HOST':'berry.db.elephantsql.com',
         'PORT':'5432',
     }
-} """
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
